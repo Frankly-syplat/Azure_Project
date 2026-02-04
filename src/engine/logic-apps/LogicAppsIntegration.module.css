@@ -1,0 +1,336 @@
+/* Logic Apps Integration Styles */
+.integrationContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #ffffff;
+}
+
+/* Demo Controls */
+.demoControls {
+  padding: 16px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.demoControls h3 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #323130;
+}
+
+.masterIdButtons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.masterIdButtons button {
+  padding: 8px 16px;
+  border: 1px solid #d2d0ce;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #323130;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.masterIdButtons button:hover {
+  background-color: #f3f2f1;
+  border-color: #c8c6c4;
+}
+
+.masterIdButtons button.active {
+  background-color: #0078d4;
+  border-color: #0078d4;
+  color: #ffffff;
+}
+
+.currentMaster {
+  margin: 8px 0 0 0;
+  font-size: 12px;
+  color: #605e5c;
+  font-weight: 500;
+}
+
+/* Main Content Layout */
+.mainContent {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.designerArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+/* Right Panel Container with Header Above */
+.rightPanelContainer {
+  width: 300px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fafafa;
+  border-left: 1px solid #e1e1e1;
+}
+
+.rightPanelHeader {
+  padding: 12px 16px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e1e1e1;
+  min-height: 60px;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  min-height: 40px;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.masterIdSection {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.modeBadge {
+  background-color: #deecf9;
+  color: #0078d4;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+.masterIdInfo {
+  font-size: 11px;
+  color: #605e5c;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.contextSettings {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.localeSettings {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.settingsLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: #323130;
+  white-space: nowrap;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #323130;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.checkboxLabel input[type="checkbox"] {
+  margin: 0 4px 0 0;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+.localeSelect {
+  padding: 4px 8px;
+  border: 1px solid #d2d0ce;
+  border-radius: 2px;
+  background-color: #ffffff;
+  font-size: 12px;
+  color: #323130;
+  cursor: pointer;
+  min-width: 100px;
+}
+
+.localeSelect:focus {
+  outline: none;
+  border-color: #0078d4;
+  box-shadow: 0 0 0 1px #0078d4;
+}
+
+/* Right Panel Content */
+.rightPanel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #fafafa;
+}
+
+.settingsArea {
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .rightPanelContainer {
+    width: 250px;
+    min-width: 250px;
+  }
+  
+  .rightSection {
+    gap: 12px;
+  }
+  
+  .contextSettings {
+    gap: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    flex-direction: column;
+  }
+  
+  .rightPanelContainer {
+    width: 100%;
+    min-width: unset;
+    height: auto;
+    border-left: none;
+    border-top: 1px solid #e1e1e1;
+  }
+  
+  .rightPanelHeader {
+    padding: 8px 12px;
+  }
+  
+  .headerRow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  
+  .headerContent {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .contextSettings {
+    gap: 8px;
+  }
+  
+  .masterIdSection {
+    align-self: flex-end;
+  }
+  
+  .demoControls {
+    padding: 12px;
+  }
+  
+  .masterIdButtons {
+    flex-wrap: wrap;
+  }
+}
+
+/* Dark Theme Support */
+@media (prefers-color-scheme: dark) {
+  .integrationContainer {
+    background-color: #1e1e1e;
+  }
+  
+  .demoControls {
+    background-color: #2d2d30;
+    border-bottom-color: #484644;
+  }
+  
+  .demoControls h3 {
+    color: #ffffff;
+  }
+  
+  .masterIdButtons button {
+    background-color: #484644;
+    border-color: #605e5c;
+    color: #ffffff;
+  }
+  
+  .masterIdButtons button:hover {
+    background-color: #605e5c;
+    border-color: #797775;
+  }
+  
+  .currentMaster {
+    color: #c8c6c4;
+  }
+  
+  .designerArea {
+    background-color: #1e1e1e;
+  }
+  
+  .rightPanelContainer {
+    background-color: #323130;
+    border-left-color: #484644;
+  }
+  
+  .rightPanelHeader {
+    background-color: #2d2d30;
+    border-bottom-color: #484644;
+  }
+  
+  .modeBadge {
+    background-color: #004578;
+    color: #9cc3f7;
+  }
+  
+  .masterIdInfo {
+    color: #c8c6c4;
+  }
+  
+  .settingsLabel {
+    color: #ffffff;
+  }
+  
+  .checkboxLabel {
+    color: #ffffff;
+  }
+  
+  .localeSelect {
+    background-color: #484644;
+    border-color: #605e5c;
+    color: #ffffff;
+  }
+  
+  .localeSelect:focus {
+    border-color: #0078d4;
+    box-shadow: 0 0 0 1px #0078d4;
+  }
+  
+  .rightPanel {
+    background-color: #323130;
+  }
+}

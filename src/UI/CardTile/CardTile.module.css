@@ -1,0 +1,68 @@
+.cardTile {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(var(--color-white));
+  border-radius: var(--radius-lg);
+  border: 1px solid hsl(var(--color-gray-200));
+  padding: var(--space-4);
+  min-height: 110px;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+.cardTile:hover {
+  border-color: hsl(var(--color-gray-300));
+  background-color: hsl(var(--color-gray-50));
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  flex: 1;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: hsl(var(--color-gray-900));
+  line-height: var(--line-height-tight);
+  margin: 0;
+}
+
+.description {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  color: hsl(var(--color-gray-500));
+  line-height: var(--line-height-normal);
+  margin: 0;
+}
+
+.iconRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: var(--space-4);
+}
+
+.mainIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(217 91% 75%);
+}
+
+.actionButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+

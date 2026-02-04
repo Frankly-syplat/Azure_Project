@@ -1,0 +1,77 @@
+.rightSidebar {
+  width: var(--right-sidebar-width);
+  height: 100%;
+  background-color: hsl(var(--color-white));
+  border-left: 1px solid hsl(var(--color-gray-200));
+  overflow-y: auto;
+}
+
+.navigation {
+  padding: var(--space-4);
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: hsl(var(--color-gray-600));
+  background-color: transparent;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  text-align: left;
+  transition: all var(--transition-fast);
+}
+
+.navItem:hover {
+  background-color: hsl(var(--color-gray-100));
+  color: hsl(var(--color-gray-800));
+}
+
+.navItem:focus-visible {
+  outline: 2px solid hsl(var(--color-accent-blue));
+  outline-offset: -2px;
+}
+
+.navItem.active {
+  background-color: hsl(var(--color-primary-blue-light));
+  color: hsl(var(--color-primary-blue));
+  font-weight: var(--font-weight-semibold);
+}
+
+.navItem.active:hover {
+  background-color: hsl(var(--color-primary-blue) / 0.12);
+}
+
+.toggleButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  border: none;
+  background-color: transparent;
+  color: hsl(var(--color-gray-800));
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.toggleButton:hover {
+  background-color: hsl(var(--color-gray-100));
+  color: hsl(var(--color-gray-900));
+}
+
+.toggleButton:focus-visible {
+  outline: 2px solid hsl(var(--color-accent-blue));
+  outline-offset: 2px;
+}

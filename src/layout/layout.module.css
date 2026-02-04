@@ -1,0 +1,99 @@
+.appLayout {
+  display: grid;
+  grid-template-areas:
+    "topbar topbar topbar"
+    "left main right";
+  grid-template-columns: var(--left-sidebar-width) 1fr auto;
+  grid-template-rows: var(--topbar-height) 1fr;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.topBar {
+  grid-area: topbar;
+}
+
+.leftSidebar {
+  grid-area: left;
+}
+
+.mainContent {
+  grid-area: main;
+  height: calc(100vh - var(--topbar-height));
+  overflow-y: auto;
+  background-color: hsl(var(--color-gray-50));
+}
+
+.rightSidebar {
+  grid-area: right;
+  height: calc(100vh - var(--topbar-height));
+  overflow-y: auto;
+}
+
+/* Collapsed state for right sidebar */
+.rightSidebarCollapsed {
+  width: 0;
+  overflow: hidden;
+}
+
+/* Main Workspace Grid */
+.mainWorkspace {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-6);
+  padding: var(--space-8);
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 100%;
+}
+
+/* Wider workspace for Logic Apps visualization */
+.mainWorkspaceFullBleed {
+  max-width: none;
+  margin: 0;
+  padding: var(--space-4);
+}
+
+/* Content area that spans columns */
+.contentFull {
+  grid-column: 1 / -1;
+}
+
+.contentHalf {
+  grid-column: span 6;
+}
+
+.contentThird {
+  grid-column: span 4;
+}
+
+@media (max-width: 1024px) {
+  .contentHalf {
+    grid-column: 1 / -1;
+  }
+  
+  .contentThird {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 768px) {
+  .appLayout {
+    grid-template-columns: 0 1fr 0;
+  }
+  
+  .leftSidebar,
+  .rightSidebar {
+    display: none;
+  }
+  
+  .mainWorkspace {
+    padding: var(--space-4);
+  }
+  
+  .contentThird {
+    grid-column: 1 / -1;
+  }
+}

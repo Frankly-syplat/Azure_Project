@@ -1,0 +1,54 @@
+.tileActionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.tileActionButton:focus-visible {
+  outline: 2px solid hsl(var(--color-accent-blue));
+  outline-offset: 2px;
+}
+
+/* Sizes */
+.sm {
+  width: 32px;
+  height: 32px;
+}
+
+.md {
+  width: 40px;
+  height: 40px;
+}
+
+.lg {
+  width: 48px;
+  height: 48px;
+}
+
+/* Variants */
+.default {
+  background-color: hsl(var(--color-gray-100));
+  border: none;
+  color: hsl(var(--color-gray-800));
+}
+
+.default:hover {
+  background-color: hsl(var(--color-gray-200));
+  color: hsl(var(--color-gray-900));
+}
+
+.outline {
+  background-color: hsl(var(--color-white));
+  border: 1px solid hsl(var(--color-gray-200));
+  color: hsl(var(--color-gray-800));
+}
+
+.outline:hover {
+  background-color: hsl(var(--color-gray-50));
+  border-color: hsl(var(--color-gray-300));
+  color: hsl(var(--color-gray-900));
+}

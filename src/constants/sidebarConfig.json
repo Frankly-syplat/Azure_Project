@@ -1,0 +1,31 @@
+{
+  "leftSidebarItems": [
+    { "id": "home", "icon": "HomeIcon", "label": "Home" },
+    { "id": "dashboard", "icon": "DashboardIcon", "label": "Dashboard" },
+    { "id": "users", "icon": "UsersIcon", "label": "Users" },
+    { "id": "settings", "icon": "SettingsIcon", "label": "Settings" }
+  ],
+  "rightSidebarNavigation": {
+    "home": [
+      { "id": "overview", "label": "Overview" },
+      { "id": "recent-activity", "label": "Recent Activity" },
+      { "id": "favorites", "label": "Favorites" },
+      { "id": "quick-actions", "label": "Quick Actions" }
+    ],
+    "dashboard": [
+      { "id": "analytics", "label": "Analytics" },
+      { "id": "reports", "label": "Reports" },
+      { "id": "metrics", "label": "Metrics" }
+    ],
+    "users": [
+      { "id": "all-users", "label": "All Users" },
+      { "id": "teams", "label": "Teams" },
+      { "id": "permissions", "label": "Permissions" }
+    ],
+    "settings": [
+      { "id": "general", "label": "General" },
+      { "id": "security", "label": "Security" },
+      { "id": "integrations", "label": "Integrations" }
+    ]
+  }
+}

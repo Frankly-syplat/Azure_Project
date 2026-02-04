@@ -1,0 +1,75 @@
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--topbar-height);
+  padding: 0 var(--space-4);
+  background-color: hsl(var(--color-white));
+  box-shadow: var(--shadow-topbar);
+  z-index: var(--z-sticky);
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: hsl(var(--color-navy-700));
+  letter-spacing: 0.02em;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.divider {
+  width: 1px;
+  height: 24px;
+  background-color: hsl(var(--color-gray-200));
+  margin: 0 var(--space-2);
+}
+
+.userProfileChip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background-color: hsl(var(--color-primary-blue));
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.userProfileChip:hover {
+  background-color: hsl(var(--color-primary-blue-hover));
+}
+
+.userProfileChip:focus-visible {
+  outline: 2px solid hsl(var(--color-accent-blue));
+  outline-offset: 2px;
+}
+
+.initials {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: hsl(var(--color-white));
+  text-transform: uppercase;
+}

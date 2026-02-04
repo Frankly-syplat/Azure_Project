@@ -1,0 +1,83 @@
+.leftSidebar {
+  display: flex;
+  flex-direction: column;
+  width: var(--left-sidebar-width);
+  height: 100%;
+  background-color: hsl(var(--color-gray-50));
+  border-right: 1px solid hsl(var(--color-gray-200));
+  padding: var(--space-4) 0;
+}
+
+.topSection {
+  display: flex;
+  justify-content: center;
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid hsl(var(--color-gray-200));
+  margin: 0 var(--space-3);
+}
+
+.mainSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: var(--space-4);
+  gap: var(--space-3);
+}
+
+.navStack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+/* Sidebar Icon Button Styles */
+.sidebarIconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  color: hsl(var(--color-gray-800));
+  background-color: transparent;
+}
+
+.sidebarIconButton:hover {
+  background-color: hsl(var(--color-gray-200));
+  color: hsl(var(--color-gray-900));
+}
+
+.sidebarIconButton:focus-visible {
+  outline: 2px solid hsl(var(--color-accent-blue));
+  outline-offset: 2px;
+}
+
+/* Variants */
+.sidebarIconButton.primary {
+  width: 48px;
+  height: 48px;
+  background-color: hsl(var(--color-primary-blue));
+  color: hsl(var(--color-white));
+  box-shadow: 0 4px 12px hsl(var(--color-primary-blue) / 0.35);
+}
+
+.sidebarIconButton.primary:hover {
+  background-color: hsl(var(--color-primary-blue-hover));
+  color: hsl(var(--color-white));
+  transform: scale(1.05);
+}
+
+/* Active State */
+.sidebarIconButton.active {
+  background-color: hsl(var(--color-primary-blue-light));
+  color: hsl(var(--color-primary-blue));
+}
+
+.sidebarIconButton.active:hover {
+  background-color: hsl(var(--color-primary-blue) / 0.15);
+}

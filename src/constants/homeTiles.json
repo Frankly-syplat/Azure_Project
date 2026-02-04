@@ -1,0 +1,4 @@
+[
+  { "id": "dashboard", "title": "Dashboard Overview", "description": "Key metrics and insights" },
+  { "id": "ui-generation", "title": "UI Generation", "description": "Generated UI pages" }
+]

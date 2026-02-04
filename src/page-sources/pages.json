@@ -1,0 +1,66 @@
+[
+  {
+    "pageId": "migration-start",
+    "title": "Migration",
+    "description": "Configure and run your migration using the checklist on the right. Select your Master ID to begin the migration process and map your entry types for data transfer.",
+    "layout": "migration",
+    "components": [
+      { "type": "heading", "value": "Migration" },
+      { "type": "button", "label": "Start Migration", "action": "START_MIGRATION" }
+    ]
+  },
+  {
+    "pageId": "master-id",
+    "title": "Master ID Store",
+    "description": "Select the Master ID that corresponds to your migration target. This ID will be used to identify and organize your migrated data.",
+    "layout": "migration",
+    "components": [
+      { "type": "heading", "value": "Master ID Store" },
+      { "type": "dropdown", "label": "Select Master ID", "source": "masterIds" },
+      { "type": "button", "label": "Submit", "action": "SUBMIT_MASTER_ID" },
+      { "type": "buttonGroup", "buttons": [
+        { "label": "Next", "action": "NEXT_FROM_MASTER_ID", "position": "right" }
+      ]}
+    ]
+  },
+  {
+    "pageId": "entry-types",
+    "title": "Entry Types",
+    "description": "Drag tasks from the left bucket and drop them on matching tasks in the right bucket. Each match creates a one-to-one mapping with a unique connection line.",
+    "layout": "migration",
+    "components": [
+      { "type": "heading", "value": "Entry Types" },
+      { "type": "taskMapping", "leftSource": "entryTypesLeft", "rightSource": "entryTypesRight" },
+      { "type": "button", "label": "Submit", "action": "SUBMIT_ENTRY_TYPES" },
+      { "type": "buttonGroup", "buttons": [
+        { "label": "Previous", "action": "PREV_FROM_ENTRY_TYPES", "position": "left" },
+        { "label": "Next", "action": "NEXT_FROM_ENTRY_TYPES", "position": "right" }
+      ]}
+    ]
+  },
+  {
+    "pageId": "entry-type-attributes",
+    "title": "Entry Type Attributes",
+    "description": "Drag tasks from the left bucket and drop them on matching tasks in the right bucket. Each match creates a one-to-one mapping with a unique connection line.",
+    "layout": "migration",
+    "components": [
+      { "type": "heading", "value": "Entry Type Attributes" },
+      { "type": "taskMapping", "leftSource": "entryTypeAttributesLeft", "rightSource": "entryTypeAttributesRight" },
+      { "type": "button", "label": "Submit", "action": "SUBMIT_ENTRY_TYPE_ATTRIBUTES" },
+      { "type": "buttonGroup", "buttons": [
+        { "label": "Previous", "action": "PREV_FROM_ENTRY_TYPE_ATTRIBUTES", "position": "left" },
+        { "label": "Next", "action": "NEXT_FROM_ENTRY_TYPE_ATTRIBUTES", "position": "right" }
+      ]}
+    ]
+  },
+  {
+    "pageId": "logic-apps",
+    "title": "Logic Apps",
+    "description": "Select a Logic App from the dropdown to view its workflow definition. The visualization shows triggers, actions, and nested workflows.",
+    "layout": "migration",
+    "components": [
+      { "type": "heading", "value": "Logic Apps" },
+      { "type": "logicAppsWorkspace", "source": "logicApps" }
+    ]
+  }
+]

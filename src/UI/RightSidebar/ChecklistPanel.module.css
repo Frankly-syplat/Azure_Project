@@ -1,0 +1,133 @@
+.checklistPanel {
+  padding: var(--space-4);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.panelTitle {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: hsl(var(--color-gray-900));
+  margin: 0 0 var(--space-6);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.loading {
+  font-size: var(--font-size-sm);
+  color: hsl(var(--color-gray-500));
+  padding: var(--space-4);
+}
+
+.checklistContainer {
+  position: relative;
+  flex: 1;
+}
+
+.verticalLine {
+  position: absolute;
+  left: 11px;
+  top: 12px;
+  bottom: 12px;
+  width: 2px;
+  background: hsl(var(--color-gray-200));
+  border-radius: var(--radius-full);
+}
+
+.stepsList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.stepItem {
+  position: relative;
+}
+
+.stepButton {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  padding-left: 0;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  text-align: left;
+  transition: background var(--transition-fast);
+}
+
+.stepButton:hover {
+  background: hsl(var(--color-gray-100));
+}
+
+.stepButton.active {
+  background: hsl(var(--color-primary-blue-light));
+}
+
+.circle {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  position: relative;
+  z-index: 1;
+}
+
+/* Completed state uses primary-blue for consistent theming */
+.circle.completed {
+  background: hsl(var(--color-primary-blue));
+  color: hsl(var(--color-white));
+}
+
+/* Active state uses primary-blue border */
+.circle.active {
+  background: hsl(var(--color-white));
+  border: 2px solid hsl(var(--color-primary-blue));
+  box-shadow: 0 0 0 4px hsl(var(--color-primary-blue) / 0.15);
+}
+
+/* Pending state - empty circle */
+.circle.pending {
+  background: hsl(var(--color-white));
+  border: 2px solid hsl(var(--color-gray-300));
+}
+
+.stepLabel {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: hsl(var(--color-gray-700));
+  flex: 1;
+}
+
+.stepButton.completed .stepLabel {
+  color: hsl(var(--color-gray-600));
+}
+
+.stepButton.active .stepLabel {
+  color: hsl(var(--color-primary-blue));
+  font-weight: var(--font-weight-semibold);
+}
+
+.stepButton.pending .stepLabel {
+  color: hsl(var(--color-gray-500));
+}
+
+.pageCount {
+  font-size: var(--font-size-xs);
+  color: hsl(var(--color-gray-400));
+}
+
+.connector {
+  display: none; /* Handled by vertical line */
+}

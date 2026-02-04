@@ -1,0 +1,253 @@
+/* Logic Apps Designer Host Styles */
+/* Azure-like workflow visualization */
+
+.designerContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(var(--color-gray-50));
+  overflow: hidden;
+}
+
+.designerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) var(--space-3);
+  background-color: hsl(var(--color-white));
+  border-bottom: 1px solid hsl(var(--color-gray-200));
+}
+
+.headerBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  background-color: hsl(var(--color-primary-blue-light));
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: hsl(var(--color-primary-blue));
+}
+
+.workflowCanvas {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-4);
+}
+
+/* Workflow Node Styles */
+.workflowSection {
+  margin-bottom: var(--space-4);
+}
+
+.sectionTitle {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: hsl(var(--color-gray-500));
+  margin-bottom: var(--space-3);
+  padding-left: var(--space-2);
+}
+
+.nodeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+/* Trigger Node - Azure blue style */
+.triggerNode {
+  background-color: hsl(var(--color-white));
+  border: 2px solid hsl(var(--color-primary-blue));
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  box-shadow: var(--shadow-sm);
+}
+
+.nodeHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.nodeIcon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  background-color: hsl(var(--color-primary-blue));
+  color: hsl(var(--color-white));
+}
+
+.nodeIcon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.nodeTitle {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: hsl(var(--color-gray-900));
+  flex: 1;
+}
+
+.nodeType {
+  font-size: var(--font-size-xs);
+  padding: 2px 6px;
+  background-color: hsl(var(--color-gray-100));
+  border-radius: var(--radius-sm);
+  color: hsl(var(--color-gray-600));
+}
+
+.nodeMeta {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.metaTag {
+  font-size: var(--font-size-xs);
+  padding: 2px 6px;
+  background-color: hsl(var(--color-primary-blue-light));
+  border-radius: var(--radius-sm);
+  color: hsl(var(--color-primary-blue));
+}
+
+/* Action Node Styles */
+.actionNode {
+  background-color: hsl(var(--color-white));
+  border: 1px solid hsl(var(--color-gray-200));
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition-fast);
+}
+
+.actionNode:hover {
+  border-color: hsl(var(--color-gray-300));
+}
+
+/* Node type variants */
+.actionNode.variable {
+  border-left: 3px solid hsl(var(--color-accent-amber));
+}
+
+.actionNode.http {
+  border-left: 3px solid hsl(var(--color-accent-blue));
+}
+
+.actionNode.condition {
+  border-left: 3px solid hsl(var(--color-accent-green));
+}
+
+.actionNode.scope {
+  border-left: 3px solid hsl(213 50% 50%);
+  background-color: hsl(var(--color-gray-50));
+}
+
+.actionNode.workflow {
+  border-left: 3px solid hsl(280 60% 55%);
+  cursor: pointer;
+}
+
+.actionNode.workflow:hover {
+  background-color: hsl(var(--color-gray-50));
+}
+
+/* Run After indicator */
+.runAfter {
+  font-size: var(--font-size-xs);
+  color: hsl(var(--color-gray-500));
+  margin-top: var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.runAfterIcon {
+  width: 12px;
+  height: 12px;
+  color: hsl(var(--color-gray-400));
+}
+
+/* Expandable container */
+.containerActions {
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px dashed hsl(var(--color-gray-200));
+  padding-left: var(--space-3);
+}
+
+/* Connector line between nodes */
+.connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  position: relative;
+}
+
+.connectorLine {
+  width: 2px;
+  height: 100%;
+  background-color: hsl(var(--color-gray-300));
+}
+
+/* Loading and empty states */
+.loadingState,
+.emptyState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: hsl(var(--color-gray-500));
+  font-size: var(--font-size-sm);
+}
+
+/* Expand/collapse icon */
+.expandIcon {
+  width: 16px;
+  height: 16px;
+  color: hsl(var(--color-gray-400));
+  transition: transform var(--transition-fast);
+  cursor: pointer;
+}
+
+.expandIcon.expanded {
+  transform: rotate(180deg);
+}
+
+/* Scope content */
+.scopeContent {
+  margin-top: var(--space-2);
+  padding: var(--space-2);
+  background-color: hsl(var(--color-gray-50));
+  border-radius: var(--radius-sm);
+}
+
+/* RTL support */
+.rtl {
+  direction: rtl;
+}
+
+.rtl .actionNode.variable,
+.rtl .actionNode.http,
+.rtl .actionNode.condition,
+.rtl .actionNode.scope,
+.rtl .actionNode.workflow {
+  border-left: none;
+  border-right-width: 3px;
+  border-right-style: solid;
+}
+
+.rtl .actionNode.variable { border-right-color: hsl(var(--color-accent-amber)); }
+.rtl .actionNode.http { border-right-color: hsl(var(--color-accent-blue)); }
+.rtl .actionNode.condition { border-right-color: hsl(var(--color-accent-green)); }
+.rtl .actionNode.scope { border-right-color: hsl(213 50% 50%); }
+.rtl .actionNode.workflow { border-right-color: hsl(280 60% 55%); }

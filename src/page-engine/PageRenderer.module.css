@@ -1,0 +1,66 @@
+.pageContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* Span all 12 columns in the parent grid */
+  grid-column: 1 / -1;
+}
+
+.pageContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+}
+
+/* Page header section with title and description */
+.pageHeader {
+  width: 100%;
+  margin-bottom: var(--space-6);
+  flex: 0 0 auto;
+}
+
+.pageTitle {
+  font-size: var(--page-title-font-size);
+  font-weight: var(--font-weight-semibold);
+  color: hsl(var(--color-gray-900));
+  margin: 0 0 var(--space-2);
+  line-height: var(--line-height-tight);
+}
+
+/* Full-width page description - no boxed container */
+.pageDescription {
+  width: 100%;
+  max-width: none;
+  font-size: var(--page-description-font-size);
+  line-height: var(--line-height-normal);
+  color: hsl(var(--page-description-color));
+  margin: 0;
+}
+
+/* Components container */
+.componentsSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+}
+
+.loading,
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  font-size: var(--font-size-sm);
+  color: hsl(var(--color-gray-600));
+}
+
+/* Page not found uses neutral black/gray token - not error red */
+.error {
+  color: hsl(var(--color-gray-700));
+}

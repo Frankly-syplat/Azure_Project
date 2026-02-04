@@ -1,0 +1,27 @@
+.heading {
+  font-family: var(--font-family-sans);
+  font-weight: var(--font-weight-semibold);
+  color: hsl(var(--color-gray-900));
+  line-height: var(--line-height-tight);
+  margin: 0;
+}
+
+.level1 {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--space-4);
+}
+
+.level2 {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-3);
+}
+
+.level3 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-2);
+}
+
+.level4 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-2);
+}

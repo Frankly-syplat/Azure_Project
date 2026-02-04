@@ -1,0 +1,59 @@
+.tableContainer {
+  margin-top: var(--space-6);
+  padding: var(--space-4);
+  background-color: hsl(var(--color-gray-50));
+  border: 1px solid hsl(var(--color-gray-200));
+  border-radius: var(--radius-md);
+}
+
+.tableTitle {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: hsl(var(--color-gray-800));
+  margin: 0 0 var(--space-3);
+}
+
+.mappingTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableHeader {
+  text-align: left;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: hsl(var(--color-gray-500));
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: var(--space-2) var(--space-3);
+  background-color: hsl(var(--color-gray-100));
+  border-bottom: 1px solid hsl(var(--color-gray-200));
+}
+
+.tableHeader:first-child {
+  border-top-left-radius: var(--radius-sm);
+}
+
+.tableHeader:last-child {
+  border-top-right-radius: var(--radius-sm);
+}
+
+.tableRow {
+  transition: background var(--transition-fast);
+}
+
+.tableRow:hover {
+  background-color: hsl(var(--color-primary-blue-light));
+}
+
+.tableRow:not(:last-child) .tableCell {
+  border-bottom: 1px solid hsl(var(--color-gray-200));
+}
+
+.tableCell {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: hsl(var(--color-primary-blue));
+  padding: var(--space-3);
+  background-color: hsl(var(--color-white));
+}
